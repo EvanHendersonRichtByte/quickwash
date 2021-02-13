@@ -4,7 +4,7 @@ QuickWash is an online laundry application that can facilitate your work
 
 ```diff
 
-- #### Current Status is under development
+- Current Status is under development
 ```
 ## Development
 
