@@ -1,6 +1,6 @@
 import React from "react";
-import BlobTop from "./svg/BlobTop";
-import BlobBottom from "./svg/BlobBottom";
+import BlobTop from "../svg/BlobTop";
+import BlobBottom from "../svg/BlobBottom";
 import { StyleSheet, Text, View } from "react-native";
 import CButton from "../components/CButton";
 
@@ -24,7 +24,9 @@ export default function Index() {
           <View style={styles.buttonTop}>
             <CButton title="Log In" color="#11698E" />
           </View>
-          <CButton type="outline" title="Sign Up" color="#11698E" />
+          <View>
+            <CButton type="outline" title="Sign Up" color="#11698E" />
+          </View>
         </View>
       </View>
     </View>
