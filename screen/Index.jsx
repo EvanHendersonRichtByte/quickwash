@@ -3,8 +3,10 @@ import BlobTop from "../svg/BlobTop";
 import BlobBottom from "../svg/BlobBottom";
 import { StyleSheet, Text, View } from "react-native";
 import CButton from "../components/CButton";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function Index() {
+export default function Index({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.blobTopContainer}>
@@ -22,10 +24,10 @@ export default function Index() {
         <BlobBottom style={styles.blobBottom} />
         <View style={styles.footer}>
           <View style={styles.buttonTop}>
-            <CButton title="Log In" color="#11698E" />
+            <CButton onPress={() => navigation.navigate('Login')} title="Log In" color="#11698E" />
           </View>
           <View>
-            <CButton type="outline" title="Sign Up" color="#11698E" />
+            <CButton onPress={() => navigation.navigate('Register')} type="outline" title="Sign Up" color="#11698E" />
           </View>
         </View>
       </View>
