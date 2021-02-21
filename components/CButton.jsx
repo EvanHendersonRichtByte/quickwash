@@ -9,7 +9,11 @@ export default function CButton(props) {
    */
 
   return (
-    <TouchableOpacity onPress={props.onPress} style={styleButtonAdjustor(props)} color={props.color}>
+    <TouchableOpacity
+      onPress={props.onPress}
+      style={styleButtonAdjustor(props)}
+      color={props.color}
+    >
       <Text style={styleTextAdjustor(props)}>{props.title}</Text>
     </TouchableOpacity>
   );

@@ -1,16 +1,54 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
-
+import BlobTop from "../svg/BlobTop";
+import { View, Text, StyleSheet } from "react-native";
+import CInput from "../components/CInput";
+import CButton from "../components/CButton";
+import CSeparator from "../components/CSeparator";
+import UserOptional from "../svg/UserOptional";
+import Mail from "../svg/Mail";
+import Lock from "../svg/Lock";
 export default function Register() {
   return (
     <View style={styles.container}>
-        <Text>Registration Page</Text>
+      <View style={styles.blobContainer}>
+        <BlobTop />
+      </View>
+      <View style={styles.headerContainer}>
+        <Text style={styles.header}>Buat Akun</Text>
+      </View>
+      <View style={styles.content}>
+        <CInput marginTop={10} placeholder="Nama" icon={<UserOptional />} />
+        <CInput marginTop={10} placeholder="Email" icon={<Mail />} />
+        <CInput marginTop={10} placeholder="Password" icon={<Lock />} />
+        <View style={styles.adjustContent}>
+          <CButton title="Daftar" color="#C5FFC3" textColor="#3E3E3E" />
+        </View>
+        <View>
+          <CSeparator
+            style={styles.separator}
+            marginVertical={20}
+            text="atau"
+          />
+        </View>
+        <View style={styles.adjustContent}>
+          <CButton
+            title="Login"
+            type="outline"
+            color="#C5FFC3"
+            textColor="#3E3E3E"
+          />
+        </View>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, alignItems: 'center', justifyContent: 'center'
-  }
+  container: { flex: 1 },
+  headerContainer: { top: 120, left: 50, position: "absolute" },
+  header: { fontSize: 40, width: "60%" },
+  blobContainer: { flex: 1 },
+  topButton: { marginTop: 20 },
+  content: { flex: 1, paddingHorizontal: 60 },
+  adjustContent: { marginTop: 30 },
 });
