@@ -7,7 +7,7 @@ import CSeparator from "../components/CSeparator";
 import UserOptional from "../svg/UserOptional";
 import Mail from "../svg/Mail";
 import Lock from "../svg/Lock";
-export default function Register() {
+export default function Register({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.blobContainer}>
@@ -26,15 +26,16 @@ export default function Register() {
         <View>
           <CSeparator
             style={styles.separator}
-            marginVertical={20}
+            marginVertical={30}
             text="atau"
           />
         </View>
-        <View style={styles.adjustContent}>
+        <View>
           <CButton
+            onPress={() => navigation.navigate("Login")}
             title="Login"
             type="outline"
-            color="#C5FFC3"
+            color="#0AFF6C"
             textColor="#3E3E3E"
           />
         </View>
